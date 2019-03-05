@@ -16,19 +16,22 @@
   <![endif]-->
 </head>
 
-<body>
-  <div class="chat-window">
+<body id='target' ondrop="drop_handler(event);" ondragover="dragover_handler(event);">
+  <div class="chat-window" draggable='true' ondragstart="dragstart_handler(event);">
     <div class='close'>x</div>
     <div class='type'>
-      <p>Need some help choosing? Let's Chat</p>
+      <p>Help: Need some help choosing? Highlight a topic on the page.</p>
+      <p id='log'></p>
+      <p id='nottyping'>Customer typing . . . </p>
     </div>
-    <button>Yes!</button>
+    <input value=''>
+    <button>Send</button>
   </div>
-  <header class="main-navigation">
+  <header class="main-navigation" id='main'>
     <div class="container nav-container">
       <h1 class="logo-heading">Fun Bus</h1>
       <nav class="nav">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#" id='prop'>Home</a>
         <a class="nav-link" href="#">About Us</a>
         <a class="nav-link" href="#">Blog</a>
         <a class="nav-link" href="#">Contact</a>
@@ -36,7 +39,7 @@
     </div>
   </header>
      
-  <div class="container home">
+  <div class="container home" id='drop_target'>
     
     <header class="intro">
       <img src="img/fun-bus.jpg" alt="bus in the sand">
@@ -72,7 +75,7 @@
     </section>
     <section class="content-pick">
 
-      <div class="destination">
+      <div class="destination" id='dest'>
         <h4>Fun In The Sun</h4>
         <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
         <div class="btn">Sign Me Up!</div>
@@ -91,7 +94,7 @@
     </section>
   </div><!-- container -->
 
-  <footer class="footer">
+  <footer class="footer" id='foot'>
     <p>Copyright Fun Bus 2018</p>
   </footer>
 
