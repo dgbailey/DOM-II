@@ -1,5 +1,82 @@
-.home {
+body{
+  .chat-window{
+    position: fixed;
+    bottom:0;
+    height:400px;
+    width:200px;
+    display:none;
+    background:green;
+  }
 
+  #chat{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 2;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+
+    button{
+      margin:10px;
+      padding:10px;
+      background:palegoldenrod;
+      width:60%;
+      height:40px;
+      font-size: 20px;
+      border-radius: 5px;
+      box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .type{
+      margin:20px;
+      margin-top:50px;
+      padding:10px;
+      background: tan;
+      width:80%;
+    }
+    .close{
+      position: absolute;
+      width:40px;
+      height:40px;
+      background:red;
+      color:white;
+      z-index: 3;
+      right:0;
+      text-align:center;
+      font-size: 20px;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+  }
+}
+.home {
+  
+
+  
+
+  #slideUp{
+    animation: slideUp 5s;
+    visibility: visible;
+    background:palegoldenrod;
+    grid-column: 2/ span 6;
+    grid-row:1/ span 6;
+    
+  }
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      
+    } 
+    100% {
+      opacity: 1;
+      
+    }
+  }
   .intro {
     padding: 90px 0 10px;
     border-bottom: 2px dashed @navigation-border;
@@ -21,6 +98,7 @@
     justify-content: space-between;
 
    
+   
     
     .text-content {
       width: 48%;
@@ -35,7 +113,7 @@
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      visibility: hidden;
       @media @mobile {
         width: 100%;
         padding: 0;
@@ -97,10 +175,12 @@
       flex-wrap: wrap;
     }
 
+    
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
-
+      visibility: hidden;
       @media @mobile {
         width: 80%;
         margin: 0 auto 30px;
