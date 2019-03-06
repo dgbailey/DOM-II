@@ -233,6 +233,7 @@ body .chat-window {
   width: 200px;
   display: none;
   background: green;
+  border-radius: 5px;
 }
 body #chat {
   display: flex;
@@ -262,7 +263,7 @@ body #chat .type {
   margin-top: 50px;
   padding: 10px;
   background: tan;
-  width: 90%;
+  width: 100%;
   height: 200px;
 }
 body #chat .type #nottyping {
@@ -270,7 +271,7 @@ body #chat .type #nottyping {
 }
 body #chat .type #typing {
   display: block;
-  font-size: 8px;
+  font-size: 10px;
 }
 body #chat .close {
   position: absolute;

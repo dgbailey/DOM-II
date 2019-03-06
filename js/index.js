@@ -70,7 +70,7 @@ const destination = document.querySelectorAll('input');
 destination.forEach(currentValue => currentValue.addEventListener('select', logSelection));
 
 
-//before input
+//beforeinput  //keydown being deprecated??
 
 const input = document.querySelector('input');
 
