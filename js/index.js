@@ -101,3 +101,10 @@ next.addEventListener('dblclick',function(e){
     e.stopPropagation();
 })
 
+const navItemHome = document.querySelector('#prop');
+navItemHome.addEventListener('click',function(e){
+    console.log('Home Button was clicked');
+    e.preventDefault();
+    
+});
+
